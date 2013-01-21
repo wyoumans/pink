@@ -5,3 +5,48 @@ body {
 .content-wrapper {
   background: transparent url(/images/top-bg.jpg) repeat-x 0 0;
 }
+
+#header {
+  position: relative;
+  .primary-navigation {
+    width: 415px;
+    height: 104px;
+    padding: 0;
+    margin: 5px 0 0 0;
+    background: transparent url(/images/menu_left.png) no-repeat 0 0;
+    text-align: center;
+    .inline-block();
+    li {
+      .inline-block();
+      margin: 45px 20px 0 0;
+      a {
+        display: block;
+        color: #FFF;
+        font-weight: bold;
+        text-decoration: none;
+      }
+    }
+    &.right {
+      background: transparent url(/images/menu_right.png) no-repeat 0 0;
+      float: right;
+    }
+    &.left {
+
+    }
+  }
+  .logo {
+    width: 298px;
+    height: 163px;
+    background: transparent url(/images/logo.png) no-repeat 0 0;
+    top: 0;
+    left: 50%;
+  }
+}
+
+#main {
+
+}
+
+#footer {
+
+}
