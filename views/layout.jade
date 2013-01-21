@@ -10,8 +10,18 @@ html.no-js(lang='en', dir='ltr')
     meta(name='description', content='')
     meta(name='keywords', content='')
   body
-    .container
-      block content
+    .content-wrapper
+      header
+        .container
+          p header
+
+      #main(role='main')
+        .container
+          block content
+
+      footer#footer
+        .container
+          p Footer
 
     script(src='/javascripts/vendor/jquery-1.9.0.min.js')
     script(src='/javascripts/vendor/modernizr-2.6.2.min.js')
