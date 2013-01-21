@@ -1,7 +1,8 @@
 (function() {
-  $(function() {
-    // Just in case JS is disabled we can style our page accordingly
-    $('html').removeClass('no-js').addClass('yes-js');
 
+  $(function() {
+    $('html').removeClass('no-js').addClass('yes-js');
+    $('.container').hide().delay(100).fadeIn(800);
   });
+
 })();
