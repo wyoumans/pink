@@ -2,46 +2,10 @@
 // Mixin
 // ============================================================================
 //
-// Selection of LESS mixins from LESSelements (http://lesselements.com/) and 
+// Selection of LESS mixins from LESSelements (http://lesselements.com/) and
 // ClearLess (https://github.com/clearleft/clearless/)... which is where I
 // stole the description on these items!
-//
-//
-// Content
-// ----------------------------------------------------------------------------
-// - Border Radius
-// - Box Sizing
-// - Box Shadow
-// - Transition
-// - Tranform
-// - Tranform Origin
-// - Rotate
-// - Placeholder
-// - Gradient
-//   - hortizontal
-//   - vertical
-// - Clearfix
-// - Inline Block
-// - Image Replace
-// - Image Replace Text
-// - Hidden
-// - Visually Hidden
-// - Size
-// - Font Size rem
-// - Font Size em
-// - Word Wrap
-// - Column Count
-// - Column Gap
-// - Column With
-// - Column Rule
-// - Column Break Before
-// - Opacity
-// - Image
-//   - Sprite
-//   - Single
-//   - Position
 ///
-
 
 ///
 // Border Radius
@@ -50,13 +14,12 @@
 ///
 .border-radius(@radius: 5px) {
     -webkit-border-radius: @radius;
-	-webkit-background-clip: padding-box; 
+	-webkit-background-clip: padding-box;
 	-moz-border-radius: @radius;
 	-moz-background-clip: padding;
 	border-radius: @radius;
-	background-clip: padding-box; 
+	background-clip: padding-box;
 }
-
 
 ///
 // Box Sizing
@@ -70,7 +33,6 @@
 	box-sizing: @type;
 }
 
-
 ///
 // Box Shadow
 // ----------------------------------------------------------------------------
@@ -81,7 +43,6 @@
 	-moz-box-shadow: @shadow;
 	box-shadow: @shadow;
 }
-
 
 ///
 // Transition
@@ -94,14 +55,13 @@
 	transition: @transition;
 }
 
-
 ///
 // Transform
 // ----------------------------------------------------------------------------
-// Specifies the two-dimensional linear transformation applied to an element. 
-// The origin of the transformation is specified by the `transform-origin` 
+// Specifies the two-dimensional linear transformation applied to an element.
+// The origin of the transformation is specified by the `transform-origin`
 // property
-// 
+//
 .transform(@transform) {
  	-webkit-transform: @transform;
 	-moz-transform: @transform;
@@ -110,13 +70,12 @@
 	transition: @transform;
 }
 
-
 ///
 // Transform Origin
 // ----------------------------------------------------------------------------
-// Specifies the origin of two-dimensional linear transformations specified 
+// Specifies the origin of two-dimensional linear transformations specified
 // with the `transform` property
-// 
+//
 .transform-origin(@origin) {
  	-webkit-transform-origin: @origin;
 	-moz-transform-origin: @origin;
@@ -124,7 +83,6 @@
 	-o-transform-origin: @origin;
 	transition-origin: @origin;
 }
-
 
 ///
 // Rotate
@@ -138,7 +96,6 @@
 	-o-transform: rotate(@rotation);
 	transform: rotate(@rotation);
 }
-
 
 ///
 // Placeholder
@@ -155,12 +112,11 @@
 	}
 }
 
-
 ///
 // Gradient
 // ----------------------------------------------------------------------------
-// Uses CSS3 gradient values to generate background gradients with appropriate 
-// vendor prefixed implementations. Output varies according to the value of 
+// Uses CSS3 gradient values to generate background gradients with appropriate
+// vendor prefixed implementations. Output varies according to the value of
 // the @disable-filters setting and the child selector. Also you can specify an
 // alternative background-color rather than relying on the end-color
 ///
@@ -248,7 +204,6 @@
 
 }
 
-
 ///
 // Clearfix
 // ----------------------------------------------------------------------------
@@ -269,7 +224,6 @@
 	}
 }
 
-
 ///
 // Inline Block
 // ----------------------------------------------------------------------------
@@ -277,14 +231,13 @@
 ///
 .inline-block() {
 	display: inline-block;
-	
+
 	.ie7 & {
 		display: inline;
 		zoom: 1;
 	}
 
 }
-
 
 ///
 // Image Replace
@@ -301,7 +254,6 @@
 	background-color: transparent;
 }
 
-
 ///
 // Image Replace Text
 // ----------------------------------------------------------------------------
@@ -310,7 +262,6 @@
 .image-replace-text() {
 	text-indent: -999em;
 }
-
 
 ///
 // Hidden
@@ -322,7 +273,6 @@
 	display: none !important;
 	visibility: hidden;
 }
-
 
 ///
 // Visually Hidden
@@ -351,7 +301,6 @@
 	}
 }
 
-
 ///
 // Size
 // ----------------------------------------------------------------------------
@@ -368,7 +317,6 @@
 	height: @height;
 }
 
-
 ///
 // Font Size rem
 // ----------------------------------------------------------------------------
@@ -381,7 +329,6 @@
 	font-size: ~`"@{remSize}rem"`;
 }
 
-
 ///
 // Font Size em
 // ----------------------------------------------------------------------------
@@ -391,12 +338,11 @@
 	font-size: (@target-px-size / @context-px-size) * 1em;
 }
 
-
 ///
 // Word Wrap
 // ----------------------------------------------------------------------------
 // Implement word-wrapping for text within the element, with hyphenation where
-// supported. See 
+// supported. See
 // http://blog.kenneth.io/blog/2012/03/04/word-wrapping-hypernation-using-css/
 ///
 .word-wrap() {
@@ -407,7 +353,6 @@
 	-moz-hyphens: auto;
 	hyphens: auto;
 }
-
 
 ///
 // Column Count
@@ -420,7 +365,6 @@
 			column-count: @count;
 }
 
-
 ///
 // Column Gap
 // ----------------------------------------------------------------------------
@@ -432,7 +376,6 @@
 	column-gap: @gap;
 }
 
-
 ///
 // Column Width
 // ----------------------------------------------------------------------------
@@ -443,7 +386,6 @@
 	-moz-column-width: @width;
 	column-width: @width;
 }
-
 
 ///
 // Column Rule
@@ -457,7 +399,6 @@
 	column-rule: @style;
 }
 
-
 ///
 // Column Break Before
 // ----------------------------------------------------------------------------
@@ -469,16 +410,14 @@
 	column-break-before: @policy;
 }
 
-
 ///
-// Reset IE Filters 
+// Reset IE Filters
 // ----------------------------------------------------------------------------
 // Removes the use of a filter (taken from Bootstrap)
 ///
 .reset-filter() when not (@disable-filters) {
 	filter: e(%("progid:DXImageTransform.Microsoft.gradient(enabled = false)"));
 }
-
 
 ///
 // Opacity
@@ -487,7 +426,6 @@
 // all child elements to be transparent as well. Requires you sets as a per-
 // centage
 ///
-
 .opacity(@alpha) when not (@disable-filters) {
 	-webkit-opacity: (@alpha / 100);
 	-moz-opacity: (@alpha / 100);
@@ -500,7 +438,6 @@
 	-moz-opacity: (@alpha / 100);
 	opacity: (@alpha / 100);
 }
-
 
 ///
 // Image
@@ -521,5 +458,4 @@
 	.pos(@x, @y) {
 		background-position: @x @y;
 	}
-
 }
