@@ -8,6 +8,7 @@ body {
 
 #header {
   position: relative;
+  margin-bottom: 50px;
 
   .primary-navigation {
     width: 390px;
@@ -23,10 +24,17 @@ body {
       margin: 0 0 0 20px;
 
       a {
-        display: block;
-        color: #FFF;
-        font-weight: bold;
-        text-decoration: none;
+
+        &, &:visited {
+          display: block;
+          color: #FFF;
+          font-weight: bold;
+          text-decoration: none;
+        }
+
+        &:hover, &:active, &.active {
+          color: @doc-pink-color;
+        }
       }
     }
 
