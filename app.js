@@ -35,6 +35,13 @@ app.locals({
 });
 
 app.get('/', routes.index);
+app.get('/will', routes.will);
+app.get('/megan', routes.megan);
+app.get('/story', routes.story);
+app.get('/photos', routes.photos);
+app.get('/venue', routes.venue);
+app.get('/registry', routes.registry);
+app.get('/contact', routes.contact);
 
 http.createServer(app).listen(app.get('port'), function() {
   console.log('Express server listening on port ' + app.get('port'));

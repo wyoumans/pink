@@ -10,17 +10,17 @@ body {
   position: relative;
 
   .primary-navigation {
-    width: 415px;
-    height: 104px;
-    padding: 0;
+    width: 390px;
+    height: 57px;
+    padding: 47px 0 0 0;
     margin: 5px 0 0 0;
     background: transparent url(/images/menu_left.png) no-repeat 0 0;
-    text-align: center;
+    text-align: left;
     .inline-block();
 
     li {
       .inline-block();
-      margin: 45px 20px 0 0;
+      margin: 0 0 0 20px;
 
       a {
         display: block;
@@ -33,10 +33,16 @@ body {
     &.right {
       background: transparent url(/images/menu_right.png) no-repeat 0 0;
       float: right;
+      text-align: right;
+      padding-right: 25px;
+
+      li {
+        margin: 0 20px 0 0;
+      }
     }
 
     &.left {
-
+      padding-left: 25px;
     }
   }
 
