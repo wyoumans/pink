@@ -1,0 +1,6 @@
+nav
+  each nav, side in locals.navigation
+    ul.primary-navigation(class=side)
+      each item in nav
+        li
+          a(href=item.href, class=locals.path == item.href ? 'active' : '')= item.title

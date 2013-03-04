@@ -1,47 +1,90 @@
+'use strict';
+
+var locals = {};
+
 exports.index = function(req, res) {
-  res.render('index', {
-    title: 'yay'
-  });
+  locals = getSharedLocals(req);
+  locals.title = 'Home';
+
+  res.render('index', locals);
 };
 
-exports.will = function(req, res){
-  res.render('generic', {
-    title: 'Meet Will'
-  });
+exports.will = function(req, res) {
+  locals = getSharedLocals(req);
+  locals.title = 'Meet Will';
+
+  res.render('generic', locals);
 };
 
-exports.megan = function(req, res){
-  res.render('generic', {
-    title: 'Meet Megan'
-  });
+exports.megan = function(req, res) {
+  locals = getSharedLocals(req);
+  locals.title = 'Meet Megan';
+
+  res.render('generic', locals);
 };
 
-exports.story = function(req, res){
-  res.render('generic', {
-    title: 'Our Story'
-  });
+exports.story = function(req, res) {
+  locals = getSharedLocals(req);
+  locals.title = 'Our Story';
+
+  res.render('generic', locals);
 };
 
-exports.photos = function(req, res){
-  res.render('generic', {
-    title: 'Photos'
-  });
+exports.photos = function(req, res) {
+  locals = getSharedLocals(req);
+  locals.title = 'Photos';
+
+  res.render('generic', locals);
 };
 
-exports.venue = function(req, res){
-  res.render('generic', {
-    title: 'Venue'
-  });
+exports.venue = function(req, res) {
+  locals = getSharedLocals(req);
+  locals.title = 'Venue';
+
+  res.render('generic', locals);
 };
 
-exports.registry = function(req, res){
-  res.render('generic', {
-    title: 'Registry'
-  });
+exports.registry = function(req, res) {
+  locals = getSharedLocals(req);
+  locals.title = 'Registry';
+
+  res.render('generic', locals);
 };
 
-exports.contact = function(req, res){
-  res.render('generic', {
-    title: 'Contact'
-  });
+exports.contact = function(req, res) {
+  locals = getSharedLocals(req);
+  locals.title = 'Contact';
+
+  res.render('generic', locals);
 };
+
+function getSharedLocals(req) {
+  return {
+    path: req.path,
+    navigation: {
+      left: [{
+        title: 'Meet Will',
+        href: '/will'
+      }, {
+        title: 'Meet Megan',
+        href: '/megan'
+      }, {
+        title: 'Our Story',
+        href: '/story'
+      }, ],
+      right: [{
+        title: 'Photos',
+        href: '/photos'
+      }, {
+        title: 'Venue',
+        href: '/venue'
+      }, {
+        title: 'Registry',
+        href: '/registry'
+      }, {
+        title: 'Contact',
+        href: '/contact'
+      }]
+    }
+  }
+}
