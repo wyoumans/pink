@@ -9,6 +9,7 @@ html.no-js(lang='en', dir='ltr')
     title= title + ' | ' + site_name
     meta(name='description', content='')
     meta(name='keywords', content='')
+
   body
     .content-wrapper
       header#header
@@ -16,6 +17,8 @@ html.no-js(lang='en', dir='ltr')
           include partials/navigation
 
           a(href='/').logo
+            span.name.will Will
+            span.name.meg Meg
 
       #main(role='main')
         .container
