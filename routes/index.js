@@ -5,6 +5,7 @@ var locals = {};
 exports.index = function(req, res) {
   locals = getSharedLocals(req);
   locals.title = 'Home';
+  locals.bodyClass = 'home';
 
   res.render('index', locals);
 };
@@ -61,6 +62,7 @@ exports.contact = function(req, res) {
 function getSharedLocals(req) {
   return {
     path: req.path,
+    bodyClass: 'generic',
     navigation: {
       left: [{
         title: 'Meet Will',
