@@ -6,7 +6,11 @@ html.no-js(lang='en', dir='ltr')
     //if lt IE 9
       script(src='http://html5shiv.googlecode.com/svn/trunk/html5.js')
     link(rel='stylesheet', media='screen, projection', href='/stylesheets/main.css')
-    title= title + ' | ' + site_name
+    title
+      if title
+        = title + ' | ' + site_name
+      else
+        = site_name
     meta(name='description', content='')
     meta(name='keywords', content='')
 
