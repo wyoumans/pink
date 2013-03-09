@@ -30,7 +30,7 @@ app.configure('development', function() {
 });
 
 app.locals({
-  site_name: 'Pink',
+  site_name: 'Will & Megan are getting married',
   ga_tracking_code: process.env.GA_TRACKING_CODE || 'UA-XXXXXXXXXX-XX'
 });
 

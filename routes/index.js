@@ -4,10 +4,10 @@ var locals = {};
 
 exports.index = function(req, res) {
   locals = getSharedLocals(req);
-  locals.title = 'Home';
+  locals.title = '';
   locals.bodyClass = 'home';
 
-  res.render('index', locals);
+  res.render('home', locals);
 };
 
 exports.will = function(req, res) {
