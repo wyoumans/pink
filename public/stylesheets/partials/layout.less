@@ -26,9 +26,9 @@ body {
       a {
 
         &, &:visited {
+          font-size: 16px;
           display: block;
           color: #FFF;
-          font-weight: bold;
           text-decoration: none;
         }
 
@@ -87,23 +87,36 @@ body {
 #main {
   .clearfix();
 
-  .content {
+  .teaser {
 
-    .content-top {
+    p {
+      font-size: 18px;
+      margin-top: 10px;
+    }
+  }
+
+  .content {
+    width: 915px;
+    max-width: 100%;
+    position: relative;
+    padding: 10px 25px;
+    margin: 20px 0 40px 0;
+    background: transparent url(/images/content_bg.png) repeat-y 0 0;
+
+    .content-top, .content-bottom {
       position: absolute;
       top: -17px;
       left: 0;
       height: 17px;
-      width: 1002px;
+      width: 965px;
       background: transparent url(/images/content_top.png) no-repeat 0 0;
     }
 
-    width: auto;
-    max-width: 100%;
-    position: relative;
-    padding: 20px 0;
-    margin: 20px 0;
-    background: transparent url(/images/content_bg.png) repeat-y 0 0;
+    .content-bottom {
+      top: auto;
+      bottom: -17px;
+      background: transparent url(/images/content_bottom.png) no-repeat 0 0;
+    }
   }
 }
 
