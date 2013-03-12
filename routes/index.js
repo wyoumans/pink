@@ -34,8 +34,9 @@ exports.story = function(req, res) {
 exports.photos = function(req, res) {
   locals = getSharedLocals(req);
   locals.title = 'Photos';
+  locals.bodyClass = 'photos';
 
-  res.render('generic', locals);
+  res.render('photos', locals);
 };
 
 exports.venue = function(req, res) {

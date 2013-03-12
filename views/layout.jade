@@ -7,12 +7,18 @@ html.no-js(lang='en', dir='ltr')
       script(src='http://html5shiv.googlecode.com/svn/trunk/html5.js')
     link(rel='stylesheet', media='screen, projection', href='/stylesheets/main.css')
     title
-      if title
-        = title + ' | ' + site_name
+      if locals.title
+        = locals.title + ' | ' + locals.site_name
       else
-        = site_name
-    meta(name='description', content='')
-    meta(name='keywords', content='')
+        = locals.site_name
+
+    meta(name='description', content!= locals.site_name)
+    meta(name='keywords', content='Will, Megan, Marriage')
+
+    meta(property='og:image', content='/images/template/couple.png')
+    meta(property='og:title', content!=locals.title)
+    meta(property='og:url', content=locals.canonicalURL)
+    meta(property='og:site_name', content!=locals.site_name)
 
   body(class=locals.bodyClass)
     .content-wrapper

@@ -1,0 +1,16 @@
+!!! 5
+html
+  head
+    link(rel='stylesheet', media='screen, projection', href='/stylesheets/main.css')
+    title= title
+
+  body(class=locals.bodyClass)
+    .content-wrapper
+
+      #main(role='main')
+        .container
+          block content
+
+    script(src='/javascripts/vendor/jquery-1.9.0.min.js')
+    script(src='/javascripts/vendor/modernizr-2.6.2.min.js')
+    script(src='/javascripts/main.js')
