@@ -6,6 +6,7 @@ var express = require('express'),
     routes = require('./routes'),
     http = require('http'),
     path = require('path'),
+    middleware = require('./middleware'),
     app = express();
 
 app.configure(function() {
@@ -13,6 +14,9 @@ app.configure(function() {
   app.set('views', __dirname + '/views');
   app.set('view engine', 'jade');
   app.use(express.favicon(__dirname + '/public/favicon.ico'));
+
+  app.use(middleware.sharedLocals());
+
   app.use(express.logger('dev'));
   app.use(express.bodyParser());
   app.use(express.methodOverride());
@@ -27,11 +31,6 @@ app.configure(function() {
 
 app.configure('development', function() {
   app.use(express.errorHandler());
-});
-
-app.locals({
-  site_name: 'Will & Megan are getting married',
-  ga_tracking_code: process.env.GA_TRACKING_CODE || 'UA-XXXXXXXXXX-XX'
 });
 
 app.get('/', routes.index);

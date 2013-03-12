@@ -8,17 +8,17 @@ html.no-js(lang='en', dir='ltr')
     link(rel='stylesheet', media='screen, projection', href='/stylesheets/main.css')
     title
       if locals.title
-        = locals.title + ' | ' + locals.site_name
+        = locals.title + ' | ' + locals.siteName
       else
-        = locals.site_name
+        = locals.siteName
 
-    meta(name='description', content!= locals.site_name)
+    meta(name='description', content!= locals.siteName)
     meta(name='keywords', content='Will, Megan, Marriage')
 
     meta(property='og:image', content='/images/template/couple.png')
     meta(property='og:title', content!=locals.title)
     meta(property='og:url', content=locals.canonicalURL)
-    meta(property='og:site_name', content!=locals.site_name)
+    meta(property='og:site_name', content!=locals.siteName)
 
   body(class=locals.bodyClass)
     .content-wrapper
@@ -45,4 +45,4 @@ html.no-js(lang='en', dir='ltr')
     script(src='/javascripts/main.js')
   //-
     script(type='text/javascript')
-      var _gaq = _gaq || []; _gaq.push(['_setAccount', '#{ga_tracking_code}']); _gaq.push(['_trackPageview']); (function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();
+      var _gaq = _gaq || []; _gaq.push(['_setAccount', '#{gaTrackingCode}']); _gaq.push(['_trackPageview']); (function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();
