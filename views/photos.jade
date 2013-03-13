@@ -11,8 +11,10 @@ block content
         h1= title
 
         .photo-album
-          each photo in locals.photos
-            a.photo(href=photo.fullPath)
+          each photo, i in locals.photos
+            a.photo(href=photo.fullPath, class=(i%3-2) ? '' : 'last', rel='gal')
+              .dark
               img(src=photo.thumbPath, alt='Will & Megan')
+              .zoom Zoom
 
         .content-bottom
