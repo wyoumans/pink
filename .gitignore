@@ -26,3 +26,5 @@ npm-debug.log
 
 # Compiled Assets
 public/stylesheets/*.css
+
+public/images/content/photos

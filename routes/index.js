@@ -1,53 +1,73 @@
 'use strict';
 
-var locals = {};
+var fs = require('fs'),
+    _  = require('lodash');
 
 exports.index = function(req, res) {
-  locals.title = '';
-  locals.bodyClass = 'home';
+  res.locals.title = '';
+  res.locals.bodyClass = 'home';
 
-  res.render('home', locals);
+  res.render('home');
 };
 
 exports.will = function(req, res) {
-  locals.title = 'Meet Will';
+  res.locals.title = 'Meet Will';
 
-  res.render('generic', locals);
+  res.render('generic');
 };
 
 exports.megan = function(req, res) {
-  locals.title = 'Meet Megan';
+  res.locals.title = 'Meet Megan';
 
-  res.render('generic', locals);
+  res.render('generic');
 };
 
 exports.story = function(req, res) {
-  locals.title = 'Our Story';
+  res.locals.title = 'Our Story';
 
-  res.render('generic', locals);
+  res.render('generic');
 };
 
 exports.photos = function(req, res) {
-  locals.title = 'Photos';
-  locals.bodyClass = 'photos';
+  var absoluteThumbPath = '/images/content/photos/thumbs/',
+      absoluteFullPath = '/images/content/photos/full/',
+      relativePath = __dirname + '/../public' + absoluteThumbPath;
 
-  res.render('photos', locals);
+  fs.readdir(relativePath, function(err, files) {
+    res.locals.photos = [];
+
+    files = _.shuffle(files);
+
+    files.forEach(function(file) {
+      if (file.match(/\.jpg$/)) {
+        res.locals.photos.push({
+          thumbPath: absoluteThumbPath + file,
+          fullPath: absoluteFullPath + file
+        });
+      }
+    });
+
+    res.locals.title = 'Photos';
+    res.locals.bodyClass = 'photos';
+
+    res.render('photos');
+  });
 };
 
 exports.venue = function(req, res) {
-  locals.title = 'Venue';
+  res.locals.title = 'Venue';
 
-  res.render('generic', locals);
+  res.render('generic');
 };
 
 exports.registry = function(req, res) {
-  locals.title = 'Registry';
+  res.locals.title = 'Registry';
 
-  res.render('generic', locals);
+  res.render('generic');
 };
 
 exports.contact = function(req, res) {
-  locals.title = 'Contact';
+  res.locals.title = 'Contact';
 
-  res.render('generic', locals);
+  res.render('generic');
 };

@@ -1,6 +1,8 @@
-extends empty
+extends layout
 
 block content
+  include partials/teaser
+
   .row
     .sixteen.columns.alpha.omega
       .content
@@ -9,23 +11,8 @@ block content
         h1= title
 
         .photo-album
-          a.photo(href='/images/placeholder/photo_full.jpg')
-            img(src='/images/placeholder/photo.jpg', alt='yikes')
-          a.photo(href='/images/placeholder/photo_full.jpg')
-            img(src='/images/placeholder/photo.jpg', alt='yikes')
-          a.photo(href='/images/placeholder/photo_full.jpg')
-            img(src='/images/placeholder/photo.jpg', alt='yikes')
-          a.photo(href='/images/placeholder/photo_full.jpg')
-            img(src='/images/placeholder/photo.jpg', alt='yikes')
-          a.photo(href='/images/placeholder/photo_full.jpg')
-            img(src='/images/placeholder/photo.jpg', alt='yikes')
-          a.photo(href='/images/placeholder/photo_full.jpg')
-            img(src='/images/placeholder/photo.jpg', alt='yikes')
-          a.photo(href='/images/placeholder/photo_full.jpg')
-            img(src='/images/placeholder/photo.jpg', alt='yikes')
-          a.photo(href='/images/placeholder/photo_full.jpg')
-            img(src='/images/placeholder/photo.jpg', alt='yikes')
-          a.photo(href='/images/placeholder/photo_full.jpg')
-            img(src='/images/placeholder/photo.jpg', alt='yikes')
+          each photo in locals.photos
+            a.photo(href=photo.fullPath)
+              img(src=photo.thumbPath, alt='Will & Megan')
 
         .content-bottom
