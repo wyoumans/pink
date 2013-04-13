@@ -13,7 +13,7 @@ module.exports = function() {
 
     res.locals.bodyClass = 'generic';
 
-    res.locals.navigation =  {
+    res.locals.navigation = {
       left: [{
         title: 'Meet Will',
         href: '/will'
