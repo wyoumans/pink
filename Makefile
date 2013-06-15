@@ -18,6 +18,6 @@ run:
 run-forever:
 	@make build
 	@make minify
-	@$(forever) start --minUptime 1000 --spinSleepTime 1000 server.js
+	@$(forever) start --minUptime 1000 --spinSleepTime 1000 app.js
 
 .PHONY: build minify run run-forever
