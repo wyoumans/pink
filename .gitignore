@@ -26,5 +26,5 @@ npm-debug.log
 
 # Compiled Assets
 public/stylesheets/*.css
-public/javascripts/*min.js
+public/javascripts/*.min.js
 public/images/content/photos
