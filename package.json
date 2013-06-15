@@ -2,18 +2,26 @@
   "name": "pink",
   "version": "0.0.2",
   "private": true,
+  "author": "William Youmans <will@williamyoumans.com> (http://www.williamyoumans.com/)",
+  "description": "Our wedding website",
+  "homepage": "http://www.willandmegan.com/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/klanoma/pink.git"
+  },
   "scripts": {
     "start": "node app"
   },
   "dependencies": {
     "express": "~3.2.6",
-    "jade": "~0.31.1",
-    "less-middleware": "~0.1.11",
-    "lodash": "1.2.1"
+    "jade": "~0.31.2",
+    "less-middleware": "~0.1.12",
+    "less": "~1.4.0",
+    "forever": "~0.10.8"
   },
   "engines": {
-    "node": "0.10.9",
-    "npm": "1.2.24"
+    "node": "0.10.7",
+    "npm": "1.2.21"
   },
   "devDependencies": {}
 }
