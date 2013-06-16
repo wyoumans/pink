@@ -10,8 +10,8 @@ console.log();
 
 new compressor.minify({
   type: 'gcc',
-  fileIn: 'public/javascripts/main.js',
-  fileOut: 'public/javascripts/main.min.js',
+  fileIn: 'public/scripts/main.js',
+  fileOut: 'public/scripts/main.min.js',
   callback: function(err) {
     if (err) {
       console.log(err);
@@ -25,12 +25,12 @@ new compressor.minify({
 });
 
 var parser = new(less.Parser)({
-  paths: [__dirname + '/../public/stylesheets'],
+  paths: [__dirname + '/../public/styles'],
   filename: 'main.less'
 });
 
-parser.parse(fs.readFileSync(__dirname + '/../public/stylesheets/main.less', 'utf8'), function(err, tree) {
-  fs.writeFileSync(__dirname + '/../public/stylesheets/main.min.css', tree.toCSS({
+parser.parse(fs.readFileSync(__dirname + '/../public/styles/main.less', 'utf8'), function(err, tree) {
+  fs.writeFileSync(__dirname + '/../public/styles/main.min.css', tree.toCSS({
     compress: true
   }))
 });

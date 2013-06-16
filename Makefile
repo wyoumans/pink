@@ -4,7 +4,7 @@ forever    := ./node_modules/.bin/forever
 
 build:
 	@echo
-	@$(less) public/stylesheets/main.less > public/stylesheets/main.css
+	@$(less) public/styles/main.less > public/styles/main.css
 
 minify:
 	@echo
