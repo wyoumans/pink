@@ -18,7 +18,8 @@
     "less-middleware": "~0.1.14",
     "less": "~1.6.1",
     "node-minify": "~0.8.2",
-    "forever": "~0.10.11"
+    "forever": "~0.10.11",
+    "lodash": "~2.4.1"
   },
   "engines": {
     "node": "0.10.7",
