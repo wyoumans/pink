@@ -1,4 +1,4 @@
-!!! 5
+doctype html
 html.no-js(lang='en', dir='ltr')
   head
     meta(charset='utf-8')
@@ -42,8 +42,7 @@ html.no-js(lang='en', dir='ltr')
 
       footer#footer
         .container
-          p
-            &copy; #{new Date().getFullYear()}&nbsp;
+          p &copy; #{new Date().getFullYear()}&nbsp;
             a(href="http://www.williamyoumans.com", target="_blank") William Youmans
 
     unless process.env.NODE_ENV == 'local'
