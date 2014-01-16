@@ -17,7 +17,7 @@
     "express": "~3.4.8",
     "jade": "~1.1.4",
     "less-middleware": "~0.1.14",
-    "less": "~1.6.1"
+    "less": "~1.6.1",
     "node-minify": "~0.8.2",
     "forever": "~0.10.11"
   },
